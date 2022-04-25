@@ -9,3 +9,28 @@ To make my program run correctly we need to setup the heap with heap_setup(). Af
 
 ## Documentation
 Other functions have similar use cases as original ones [documentation](https://pl.wikibooks.org/wiki/C/malloc).
+
+## Instructions
+First we need to compile:
+```
+gcc -o [any_name] memmanager.c custom_unistd.h heap.c heap.h main.c
+```
+And to execute it:
+```
+./[any_name] "Sample text"
+```
+Expected output:
+```
+malloc: Sample text
+calloc: Sample text
+realloc: Sample text
+
+### Stan płotków przestrzeni sterty:
+    Płotek początku ....: [poprawny]
+    Płotek w pozycji brk: [poprawny]
+    Płotek końca........: [poprawny]
+### Podsumowanie: 
+    Całkowita przestrzeni dostępnej pamięci: 67108864 bajtów
+    Pamięć zarezerwowana przez sbrk() .....: 0 bajtów
+Naciśnij ENTER...
+```
